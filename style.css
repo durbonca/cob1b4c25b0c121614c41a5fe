@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 1rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 2.25rem;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 1.325rem;
+}
+
+strong {
+    font-weight: 900;
+}
+
+small {
+    font-size: 0.625rem;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hero {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-around;
+    background-image: url(images/dark-ribs.jpg);
+    background-color: darkgray;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+}
+
+.hero-top {
+    color: #F18119;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: fit-content;
+    height: fit-content;
+    display: inline-block;
+}
+
+.hero-top-bar {
+    height: 10px;
+    background: linear-gradient(to right, #ff713B, #FFA51D);
+}
+
+.hero-title {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    color: #FFF;
+    width: 80%;
+}
+
+.hero-title-main {
+    margin-top: 5rem;
+}
+
+.hero-paragraph {
+    color: #F18119;
+    margin: 2rem;
+}
+
+.form {
+    padding: 1rem;
+    display: flex;
+    flex-flow: column;
+    width: 80%;
+    color: #404044;
+    font-family: inherit;
+}
+
+.form-title {
+    margin-bottom: 0px;
+}
+
+.form-subtitle {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0px;
+    color: #F18119;
+}
+
+.input {
+    border: solid 1px #404044;
+    margin-top: 1rem;
+    text-align: center;
+    padding: .5rem 1.5rem;
+    border-radius: .5rem;
+    outline: none;
+    width: 80%;
+}
+
+.button {
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    font-size: 0.625rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    border-radius: .5rem;
+    background: linear-gradient(to right, #ff713B, #FFA51D);
+    padding: .5rem 1.5rem;
+    color: #FFF;
+    margin: 1rem auto;
+    width: 80%;
+    transition: 500ms;
+}
+
+.button:hover,
+.button:focus,
+.input:hover,
+.input:focus {
+    color: black;
+    transition: 500ms;
+    transform: scale(1.1);
+    outline: none;
+}
+
+@media(min-width: 680px) {
+    body {
+        font-size: 1.125rem;
+    }
+    h1 {
+        font-size: 3.5rem;
+    }
+    h2 {
+        font-size: 1.75rem;
+    }
+    .container {
+        flex-flow: row;
+    }
+    .hero {
+        justify-content: space-between;
+        min-height: 100vh;
+    }
+    .form {
+        min-height: 100vh;
+    }
+    .hero-title {
+        margin: auto;
+    }
+    .hero-paragraph {
+        margin: 0px;
+    }
+}
