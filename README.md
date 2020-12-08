@@ -1,3 +1,5 @@
+Demo: https://durbonca.github.io/ribs-bbq-front/
+
 # title(){
 		
 		return this.options.title || this.options.name;
