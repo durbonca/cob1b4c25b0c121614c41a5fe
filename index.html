@@ -24,18 +24,41 @@
                 </div>
             </div>
         </div>
-        <div class="form">
+        <div id="Main-Content" class="form">
             <h2 class="form-title">Become a BBQ master!</h2>
             <p class="form-subtitle"><strong>Register Today</strong></p>
             <p>BBQ isn't just standing in front of your grill with it on full blast and hoping for the best. It's an art! One way to speed up the process is to learn from the best. You can do just that by signing up for this free webinar!</p>
-            <form>
-                <input class="input" type="text" placeholder="first name">
-                <input class="input" type="text" placeholder="email">
+            <form id="Email-Collector" action="#" method="POST">
+                <input name="firstName" class="input" type="text" placeholder="first name" required>
+                <input name="emailAddress" class="input" type="text" placeholder="email" required>
                 <button type="submit" class="button">REGISTER</button>
             </form>
             <small>We'll never share your information without your permission</small>
         </div>
     </div>
+
+    <script>
+        let emailCollectorForm = document.getElementById("Email-Collector")
+        emailCollectorForm.addEventListener("submit", event => {
+            event.preventDefault()
+                // Do something with the event
+            console.log("The event is firing!")
+
+            let ourFormData = new FormData(event.target)
+
+            let userFirstName = ourFormData.get("firstName")
+
+            let updatedHtmlContent = `
+                <h2 class="form-title">Congratulations, ${userFirstName}!</h2>
+
+                <p>You're on your way to becoming a BBQ Master!</p>
+                
+                <p class="fine-print">We'll never share your information without your permission</p>
+            `
+            let ourMainContent = document.getElementById("Main-Content")
+            ourMainContent.innerHTML = updatedHtmlContent
+        })
+    </script>
 </body>
 
 </html>
